@@ -1,0 +1,27 @@
+docker run -d   -p 6000:8080   -v /home/installateur/dashy/my-conf.yml:/app/user-data/conf.yml   --name my-dashboard   --restart=always   lissy93/dashy:latest
+
+Le fichier de conf :
+installateur@localhost:~/dashy$ cat my-conf.yml 
+pageInfo:
+  title: Home Lab
+appConfig:
+  theme: colorful
+sections:
+  - name: Gitea
+    icon: far fa-rocket
+    items:
+      - title: Gitea
+        description: Le git local du bts
+        icon: fab fa-github
+        url: https://<ip>:3000
+  - name: Switch2
+    icon: far fa-rocket
+    items:
+      - title: Switch2
+        description: switch2
+        icon: fab fa-gitea
+        url: https://www.carrefour.fr/p/console-switch-2-nintendo-0045496321444
+
+
+Pour acceder au site:
+http://localhost:6000
